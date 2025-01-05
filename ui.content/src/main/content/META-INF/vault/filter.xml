@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <!-- Configurations -->
+    <filter root="/conf/bt-sample-project"/>
+
+    <!-- Content Pages -->
+    <filter root="/content/bt-sample-project"/>
+
+    <!-- Experience Fragments -->
+    <filter root="/content/experience-fragments/bt-sample-project"/>
+
+    <!-- Digital Assets -->
+    <filter root="/content/dam/bt-sample-project">
+        <include pattern="/content/dam/bt-sample-project(/.*)?"/>
+    </filter>
+
+    <!-- Optional Workflow Data -->
+    <!-- Remove if not necessary -->
+    <filter root="/var/workflow"/>
+</workspaceFilter>

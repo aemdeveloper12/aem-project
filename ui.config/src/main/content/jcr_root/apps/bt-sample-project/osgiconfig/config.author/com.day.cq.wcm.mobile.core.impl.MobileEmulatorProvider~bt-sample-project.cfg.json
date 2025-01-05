@@ -1,0 +1,6 @@
+{
+  "mobile.resourceTypes": [
+    "bt-sample-project/components/page"
+  ],
+  "README": "Indicate which page resource types should display the mobile emulators."
+}

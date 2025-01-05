@@ -1,0 +1,19 @@
+<h1> Helooo </h1>
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" >
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.title && !properties.text}"></sly>
+</sly>
+
+<sly data-sly-use.model="com.bt.sample.core.models.ImageWithTextModel"></sly>
+<h2>${model.title}</h2>
+<p>${model.text @context='html'}</p>
+
+<div class="container">
+  <img src="${model.path}" alt="Snow" style="width:100%;">
+  <div class="bottom-left">${model.bottomlefttext}</div>
+  <div class="top-left">${model.toplefttext}</div>
+  <div class="top-right">${model.toprighttext}</div>
+  <div class="bottom-right">${model.bottomrighttext}</div>
+  <div class="centered">${model.centeredtext}</div>
+</div>
+
