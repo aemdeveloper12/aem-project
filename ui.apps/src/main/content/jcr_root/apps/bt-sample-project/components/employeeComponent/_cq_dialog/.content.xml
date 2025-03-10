@@ -55,20 +55,12 @@
                     </designation>
                     <graduation
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                        checked="{Boolean}true"
                         fieldLabel="Graduation"
-                        name="./radiogroup">
-                        <items jcr:primaryType="nt:unstructured">
-                            <children
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
-                                text="Yes"/>
-                            <static
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
-                                text="No"/>
-                        </items>
-                    </graduation>
+                        name="./graduation"
+                        uncheckedValue="false"
+                        value="true"/>
                 </items>
             </column>
         </items>
