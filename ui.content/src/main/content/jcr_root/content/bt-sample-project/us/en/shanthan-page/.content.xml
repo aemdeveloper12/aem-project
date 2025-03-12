@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-03-12T09:30:36.633+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/bt-sample-project/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="shanthan page"
+        sling:resourceType="bt-sample-project/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="bt-sample-project/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="bt-sample-project/components/container"
+                layout="responsiveGrid">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="bt-sample-project/components/title"/>
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="bt-sample-project/components/container"
+                    layout="responsiveGrid">
+                    <employeecomponent
+                        jcr:created="{Date}2025-03-11T19:09:36.805+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2025-03-11T19:10:06.714+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="bt-sample-project/components/employeeComponent"
+                        designation="Software Engineer"
+                        employeeName="Shanthan"
+                        employeeNumber="3"
+                        graduation="true"
+                        skillset="Content Author"/>
+                    <formscomp
+                        jcr:created="{Date}2025-03-12T09:04:08.964+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2025-03-12T09:04:08.964+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="bt-sample-project/components/formscomp"/>
+                    <newformcomponent
+                        jcr:created="{Date}2025-03-12T09:29:55.167+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2025-03-12T09:30:36.628+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="bt-sample-project/components/newFormComponent"
+                        age="9"
+                        designation="Software Engineer"
+                        email="admin"
+                        gender="Male"
+                        graduation="true"
+                        name="Shanthan"
+                        parentName="Murali"
+                        password="admin"
+                        skillset="Developer"/>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>
