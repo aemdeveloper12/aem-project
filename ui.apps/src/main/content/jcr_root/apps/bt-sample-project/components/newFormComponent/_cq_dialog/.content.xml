@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="New Form Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <name
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Enter Your Name"
+                        name="./name"/>
+                    <age
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                        fieldDescription="Enter Your Age"
+                        fieldLabel="Enter Your Age"
+                        name="./age"/>
+                    <parentName
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Parent/Guardian Name"
+                        name="./parentName"/>
+                    <designation
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Designation"
+                        name="./designation">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            cq-dialog-dropdown-showhide-target=".list-option-listfrom-showhide-target"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <softwareEngineer
+                                granite:hide="${cqDesign.disableChildren}"
+                                jcr:primaryType="nt:unstructured"
+                                text="Software Engineer"
+                                value="Software Engineer"/>
+                            <seniorSoftwareEngineer
+                                granite:hide="${cqDesign.disableStatic}"
+                                jcr:primaryType="nt:unstructured"
+                                text="Senior Software Engineer"
+                                value="Senior Software Engineer"/>
+                            <manager
+                                granite:hide="${cqDesign.disableSearch}"
+                                jcr:primaryType="nt:unstructured"
+                                text="Manager"
+                                value="Manager"/>
+                            <seniorManager
+                                granite:hide="${cqDesign.disableTags}"
+                                jcr:primaryType="nt:unstructured"
+                                text="Senior Manager"
+                                value="Senior Manager"/>
+                        </items>
+                    </designation>
+                    <graduation
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                        checked="{Boolean}true"
+                        fieldLabel="Graduated?"
+                        name="./graduation"
+                        uncheckedValue="false"
+                        value="true"/>
+                    <skillset
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Skill Set"
+                        name="./skillset">
+                        <items jcr:primaryType="nt:unstructured">
+                            <contentauthor
+                                jcr:primaryType="nt:unstructured"
+                                text="Content Author"/>
+                            <tester
+                                jcr:primaryType="nt:unstructured"
+                                text="Tester"/>
+                            <developer
+                                jcr:primaryType="nt:unstructured"
+                                text="Developer"
+                                value="Developer"/>
+                        </items>
+                    </skillset>
+                    <gender
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
+                        fieldLabel="Select Your Gender"
+                        name="./gender">
+                        <items jcr:primaryType="nt:unstructured">
+                            <male
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
+                                text="Male"
+                                value="Male"/>
+                            <female
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
+                                text="Female"
+                                value="Female"/>
+                            <neutral
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
+                                text="Neutral"
+                                value="Neutral"/>
+                        </items>
+                    </gender>
+                    <email
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Enter Your Email"
+                        name="./email"/>
+                    <password
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/password"
+                        emptyText="Enter Your Password"
+                        fieldLabel="Enter Your Password"
+                        name="./password"/>
+                    <academics
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        fieldLabel="Add your Academics">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            name="./academics"/>
+                    </academics>
+                    <graduatedfrom
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        composite="true"
+                        fieldLabel="Academics Completion Details">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./graduatedfrom">
+                            <items jcr:primaryType="nt:unstructured">
+                                <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <class
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Enter the name of the class"
+                                            fieldLabel="Class Name"
+                                            name="class"/>
+                                        <passedoutfrom
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Enter the College Name"
+                                            fieldLabel="Passed Out From"
+                                            name="passedoutfrom"/>
+                                        <passedoutyear
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                            fieldDescription="Enter the Bottom Right  text"
+                                            fieldLabel="Passed out Year"
+                                            name="passedoutyear"/>
+                                    </items>
+                                </column>
+                            </items>
+                        </field>
+                    </graduatedfrom>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>
