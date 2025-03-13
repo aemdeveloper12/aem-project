@@ -118,6 +118,52 @@
                         emptyText="Enter Your Password"
                         fieldLabel="Enter Your Password"
                         name="./password"/>
+                    <academics
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        fieldLabel="Add your Academics">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            name="./academics"/>
+                    </academics>
+                    <graduatedfrom
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        composite="true"
+                        fieldLabel="Academics Completion Details">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./graduatedfrom">
+                            <items jcr:primaryType="nt:unstructured">
+                                <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <class
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Enter the name of the class"
+                                            fieldLabel="Class Name"
+                                            name="class"/>
+                                        <passedoutfrom
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Enter the College Name"
+                                            fieldLabel="Passed Out From"
+                                            name="passedoutfrom"/>
+                                        <passedoutyear
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                            fieldDescription="Enter the Bottom Right  text"
+                                            fieldLabel="Passed out Year"
+                                            name="passedoutyear"/>
+                                    </items>
+                                </column>
+                            </items>
+                        </field>
+                    </graduatedfrom>
                 </items>
             </column>
         </items>
