@@ -63,6 +63,10 @@
                                     cq:policy="bt-sample-project/components/patientEditConfig/policy_1742831045094"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <employeeEditConfig
+                                    cq:policy="bt-sample-project/components/employeeEditConfig/policy_1742875922307"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/core/components/policies/mapping"/>
                         </components>
                     </bt-sample-project>
                 </container>
