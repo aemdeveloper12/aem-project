@@ -1,1 +1,31 @@
-<h1>This is the my patient form component</h1>
+
+<style>
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.bottom-left {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  top: 16px;
+  bottom: 16px;
+  top: 24px;
+  bottom: 24px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
+
+
+<h2>${properties.title}</h2>
+<p>${properties.text @context='html'}</p>
+
+
