@@ -1,67 +1,168 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:primaryType="nt:unstructured"
-    jcr:title="Form Component"
+    jcr:title="Patient Form"
     sling:resourceType="cq/gui/components/authoring/dialog">
     <content
         jcr:primaryType="nt:unstructured"
-        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        sling:resourceType="granite/ui/components/coral/foundation/container">
         <items jcr:primaryType="nt:unstructured">
-            <column
+            <tabs
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="granite/ui/components/coral/foundation/container">
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
                 <items jcr:primaryType="nt:unstructured">
-                    <name
+                    <listSettings
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="Patient Name"
-                        name="./name"/>
-                    <age
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
-                        fieldDescription="Enter the Age"
-                        fieldLabel="Enter Patient Age"
-                        name="./age"/>
-                    <symptoms
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
-                        col="3"
-                        fieldLabel="Add Symptoms About The Disease"
-                        name="./symptoms"
-                        rows="{Long}3"/>
-                    <whiteCard
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
-                        name="./whiteCard"
-                        text="White Card Holder"
-                        uncheckedValue="false"
-                        value="{Boolean}true"/>
-                    <image
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                        fieldDescription="Enter the Image to display on the page"
-                        fieldLabel="Add Your Image"
-                        name="./image"
-                        rootPath="/content/dam"/>
-                    <report
-                        granite:class="cmp-image__editor-file-upload"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
-                        class="cq-droptarget"
-                        enableNextGenDynamicMedia="{Boolean}true"
-                        fieldLabel="[Report]"
-                        fileNameParameter="./fileName"
-                        fileReferenceParameter="./fileReference"
-                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
-                        name="./report"/>
-                    <date
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
-                        fieldDescription="Enter the diesase found date"
-                        fieldLabel="Disease found date"
-                        name="./date"/>
+                        jcr:title="List Settings"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <name
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Patient Name"
+                                                name="./name"/>
+                                            <listFrom
+                                                granite:class="cq-dialog-dropdown-showhide"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Patient Form"
+                                                name="./listFrom">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq-dialog-dropdown-showhide-target=".list-option-listfrom-showhide-target"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <male
+                                                        granite:hide="${cqDesign.disableChildren}"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Male"
+                                                        value="male"/>
+                                                    <female
+                                                        granite:hide="${cqDesign.disableStatic}"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Female"
+                                                        value="female"/>
+                                                </items>
+                                            </listFrom>
+                                            <setMale
+                                                granite:class="hide list-option-listfrom-showhide-target foundation-layout-util-vmargin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidetargetvalue="male"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <heading
+                                                        granite:class="coral-Heading coral-Heading--4"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                        level="{Long}4"
+                                                        text="Male Patient Name"/>
+                                                    <well
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/well">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <maleId
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Male ID"
+                                                                name="./maleId"/>
+                                                            <maleImage
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                fieldLabel="Male Background Image"
+                                                                name="./maleImage"
+                                                                rootPath="/content/dam"/>
+                                                            <name
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Male Name"
+                                                                name="./name"/>
+                                                        </items>
+                                                    </well>
+                                                </items>
+                                            </setMale>
+                                            <setFemale
+                                                granite:class="hide list-option-listfrom-showhide-target foundation-layout-util-vmargin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidetargetvalue="female"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <heading
+                                                        granite:class="coral-Heading coral-Heading--4"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                        level="{Long}4"
+                                                        text="Female Patient name"/>
+                                                    <well
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/well">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <femaleImage
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                fieldLabel="Female Image"
+                                                                name="./image"
+                                                                rootPath="/content/dam"/>
+                                                            <altText
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Alt Text"
+                                                                name="./altText"/>
+                                                        </items>
+                                                    </well>
+                                                </items>
+                                            </setFemale>
+                                            <age
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                fieldDescription="Enter the Age"
+                                                fieldLabel="Enter Patient Age"
+                                                name="./age"/>
+                                            <report
+                                                granite:class="cmp-image__editor-file-upload"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                class="cq-droptarget"
+                                                enableNextGenDynamicMedia="{Boolean}true"
+                                                fieldLabel="[Report]"
+                                                fileNameParameter="./fileName"
+                                                fileReferenceParameter="./fileReference"
+                                                mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                                name="./report"/>
+                                            <date
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                                fieldDescription="Enter the diesase found date"
+                                                fieldLabel="Disease found date"
+                                                name="./date"/>
+                                            <symptoms
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                col="3"
+                                                fieldLabel="Add Symptoms About The Disease"
+                                                name="./symptoms"
+                                                rows="{Long}3"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </listSettings>
                 </items>
-            </column>
+            </tabs>
         </items>
     </content>
 </jcr:root>
