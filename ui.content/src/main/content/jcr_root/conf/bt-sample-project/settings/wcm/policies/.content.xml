@@ -350,6 +350,16 @@
                         layoutDisabled="false">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </right_container_policy>
+                <demo_Policy
+                        jcr:lastModified="{Date}2025-04-22T19:47:04.970+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Demo Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/apps/bt-sample-project/components/authorBooksMultifield,/apps/bt-sample-project/components/compositeAuthorBooksMultifield,/apps/bt-sample-project/components/mergerComponent,/apps/bt-sample-project/components/newFormComponent,/apps/bt-sample-project/components/patient]"
+                        layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </demo_Policy>
             </container>
             <teaser jcr:primaryType="nt:unstructured">
                 <policy_1575031387650
@@ -422,6 +432,17 @@
                                         jcr:primaryType="nt:unstructured"/>
                             </cq:styles>
                         </item1>
+                        <item2
+                                cq:styleGroupLabel="Bottom Padding"
+                                jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                        cq:styleClasses="8"
+                                        cq:styleId="1745331193778"
+                                        cq:styleLabel="8"
+                                        jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item2>
                     </cq:styleGroups>
                 </policy>
             </page>
