@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="4bcaa3d9-cf95-4aa4-908a-f2344f710656">
+    <jcr:content
+        cq:name="author-details"
+        cq:parentPath="/content/dam/content-fragments/en"
+        cq:versionCreator="admin"
+        jcr:lastModified="{Date}2025-04-29T20:26:45.605+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Author Details"
+        contentFragment="{Boolean}true"
+        lastFragmentSave="{Date}2025-04-29T20:26:45.605+05:30">
+        <data
+            cq:model="/conf/bt-sample-project/settings/dam/cfm/models/author"
+            jcr:primaryType="nt:unstructured"
+            _strucVersion="{Long}1">
+            <master
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                authorName="Shanthan"
+                authorName_x0040_LastModified="{Date}2025-04-29T20:12:17.350+05:30"
+                books="[Harrry Potter,Lord of the Rings,God Father]"
+                books_x0040_LastModified="{Date}2025-04-29T20:12:17.353+05:30"
+                isAuthor="{Boolean}true"
+                isAuthor_x0040_LastModified="{Date}2025-04-29T20:12:17.354+05:30"
+                profession_x0040_LastModified="{Date}2025-04-29T20:10:49.471+05:30"
+                publishDate="{Date}2025-04-29T20:11:00.000+05:30"
+                publishDate_x0040_LastModified="{Date}2025-04-29T20:12:17.396+05:30"/>
+            <author_1
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                _x0040_variationCreationDate="{Date}2025-04-29T20:25:04.035+05:30"
+                authorName="Shanthan Gurram"
+                authorName_x0040_LastModified="{Date}2025-04-29T20:26:45.546+05:30"
+                books="[Harrry Potter,Lord of the Rings,God Father,Apocalypse]"
+                books_x0040_LastModified="{Date}2025-04-29T20:26:45.554+05:30"
+                isAuthor="{Boolean}true"
+                isAuthor_x0040_LastModified="{Date}2025-04-29T20:25:04.045+05:30"
+                profession_x0040_LastModified="{Date}2025-04-29T20:25:04.045+05:30"
+                publishDate="{Date}2025-04-29T20:11:00.000+05:30"
+                publishDate_x0040_LastModified="{Date}2025-04-29T20:26:45.563+05:30"/>
+        </data>
+        <indexedData jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="8ec51c3e-3509-4ac0-9348-67f87ef28e96"
+                _x0040_string_x0040_model="/conf/bt-sample-project/settings/dam/cfm/models/author"
+                _x0040_stringArray_x0040_variations="[author_1]"
+                boolean_x0040_isAuthor="{Boolean}true"
+                calendar_x0040_publishDate="{Date}2025-04-29T20:11:00.000+05:30"
+                string_x0040_authorName="Shanthan"
+                stringArray_x0040_books="[Harrry Potter,Lord of the Rings,God Father]"/>
+            <author_1
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="f7f85c45-4008-4d2b-8b28-1199de494891"
+                _x0040_string_x0040_model="/conf/bt-sample-project/settings/dam/cfm/models/author"
+                boolean_x0040_isAuthor="{Boolean}true"
+                calendar_x0040_publishDate="{Date}2025-04-29T20:11:00.000+05:30"
+                string_x0040_authorName="Shanthan Gurram"
+                stringArray_x0040_books="[Harrry Potter,Lord of the Rings,God Father,Apocalypse]"/>
+        </indexedData>
+        <metadata
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <model jcr:primaryType="nt:unstructured">
+            <variations jcr:primaryType="nt:unstructured">
+                <author_1
+                    jcr:description="\0"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Author 1"
+                    name="author_1">
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        synchronizeWithVersion="[authorName:d582448e-b97e-4585-a2e0-00df1084beb3,books:d582448e-b97e-4585-a2e0-00df1084beb3,isAuthor:d582448e-b97e-4585-a2e0-00df1084beb3,publishDate:d582448e-b97e-4585-a2e0-00df1084beb3,profession:d582448e-b97e-4585-a2e0-00df1084beb3]"/>
+                </author_1>
+            </variations>
+        </model>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>
