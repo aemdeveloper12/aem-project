@@ -1,0 +1,7 @@
+<sly data-sly-use.button="/apps/bt-sample-project/components/slytemplate/cta-template.html"/>
+
+<div data-sly-call="${button.ctaButton @text=properties.ctaText, url=properties.ctaLink, target=properties.ctaTarget}"></div>
+
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"></sly>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty=!properties.ctaText}"></sly>

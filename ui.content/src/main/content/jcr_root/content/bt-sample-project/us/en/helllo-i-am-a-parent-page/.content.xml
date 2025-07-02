@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-07-02T08:57:33.408+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/bt-sample-project/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="hello i am a parent page"
+        sling:resourceType="bt-sample-project/components/page"
+        pwaCachestrategy="staleWhileRevalidate"
+        pwaDisplay="standalone"
+        pwaOrientation="any">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="bt-sample-project/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="bt-sample-project/components/container"
+                layout="responsiveGrid">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="bt-sample-project/components/title"/>
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="bt-sample-project/components/container"
+                    layout="responsiveGrid">
+                    <imgtxt
+                        jcr:created="{Date}2025-07-02T08:57:33.393+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2025-07-02T08:57:33.393+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="bt-sample-project/components/imgtxt"/>
+                </container>
+            </container>
+        </root>
+        <cq:featuredimage
+            jcr:lastModified="{Date}2025-07-02T08:56:37.917+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/wcm/components/image/v3/image"
+            altValueFromDAM="true"/>
+    </jcr:content>
+    <hello-i-am-a-child-page/>
+</jcr:root>
