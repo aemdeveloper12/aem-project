@@ -39,3 +39,16 @@ ${object.name} :::: ${object.title}:::${objectList.count}:::${objectList.index}:
 </ul>
 
 </div>
+
+<img src="${properties.imagePath}" data-sly-attribute.alt="Image Missing">
+
+<h2> ${'#.00' @format=42}</h2>
+
+<h2> ${['one','two','three'] @join =';' }</h2>
+
+<div>
+    <span data-sly-unwrap>Practice AEM</span>
+</div>
+
+<sly data-sly-set.name="Practice AEM"/>
+<div>${name}</div>
