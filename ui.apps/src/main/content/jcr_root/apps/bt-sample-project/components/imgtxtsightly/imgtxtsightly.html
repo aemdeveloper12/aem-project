@@ -48,4 +48,11 @@
     <div class="centered">${properties.centeredtext}</div>
 </div>
 
+<!--/*Properties Vs Page Properties Vs Inherited Page Properties */-->
+<h1 data-sly-test=${pageProperties.jcr:title}> Page Title: ${pageProperties.jcr:title} </h1>
+
+<h1 data-sly-test="${pageProperties.jcr:title || inheritedPageProperties.jcr:title}"> Page Title: ${inheritedPageProperties.jcr:title} </h1>
+
+<sly data-sly-use.button="/apps/bt-sample-project/components/slytemplate/cta-template.html"/>
+<div data-sly-call="${button.ctaButton @text='GMAIL', url='https://www.gmail.com', target='_self'}"></div>
 
