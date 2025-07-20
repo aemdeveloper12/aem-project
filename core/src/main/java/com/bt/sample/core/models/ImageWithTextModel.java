@@ -13,6 +13,7 @@ public class ImageWithTextModel {
 
 	@ValueMapValue
 	@Required
+	@Named
 	private String name;
 	
 	@ValueMapValue
